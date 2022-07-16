@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Good Gums web page</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jinhwan Kim" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="purchasing plants" />
+    <meta name="description" content="Good Gums's commercial website." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <!-- 내가 한거 대신 선생이 준 코드 넣어서 실험해 봄
+        <script>
+            /* function to store the information from the user */
+            function passResponse() {
+                var FullName = document.getElementById("FullName").value;
+                localStorage.setItem("FullName", FullName);
+                var PhoneNumber = document.getElementById("PhoneNumber").value;
+                localStorage.setItem("PhoneNumber", PhoneNumber);
+                var Email = document.getElementById("Email").value;
+                localStorage.setItem("Email", Email);
+                var Address = document.getElementById("Address").value;
+                localStorage.setItem("Address", Address);
+
+
+                var ProductNo1 = document.getElementById("ProductNo1").value;
+                localStorage.setItem("ProductNo1", ProductNo1);
+                var ProductNo2 = document.getElementById("ProductNo2").value;
+                localStorage.setItem("ProductNo2", ProductNo2);
+                var ProductNo3 = document.getElementById("ProductNo3").value;
+                localStorage.setItem("ProductNo3", ProductNo3);
+                var ProductNo4 = document.getElementById("ProductNo4").value;
+                localStorage.setItem("ProductNo4", ProductNo4);
+                var ProductNo5 = document.getElementById("ProductNo5").value;
+                localStorage.setItem("ProductNo5", ProductNo5);
+
+                var QuantityNo1 = document.getElementById("QuantityNo1").value;
+                localStorage.setItem("QuantityNo1", QuantityNo1);
+                var QuantityNo2 = document.getElementById("QuantityNo2").value;
+                localStorage.setItem("QuantityNo2", QuantityNo2);
+                var QuantityNo3 = document.getElementById("QuantityNo3").value;
+                localStorage.setItem("QuantityNo3", QuantityNo3);
+                var QuantityNo4 = document.getElementById("QuantityNo4").value;
+                localStorage.setItem("QuantityNo4", QuantityNo4);
+                var QuantityNo5 = document.getElementById("QuantityNo5").value;
+                localStorage.setItem("QuantityNo5", QuantityNo5);
+
+                var PhonePay = document.getElementById("PhonePay").value;
+                localStorage.setItem("PhonePay", PhonePay);
+                var EmailPay = document.getElementById("EmailPay").value;
+                localStorage.setItem("EmailPay", EmailPay);
+
+                var PhonePay = document.getElementById("check").value;
+                localStorage.setItem("check", check);
+
+                var comments = document.getElementById("comments").value;
+                localStorage.setItem("comments", comments);
+                return false;
+            }
+        </script>
+    -->
+</head>
+
+<body>
+    <!-- Logo and menu bar -->
+    <header>
+        <a href="index.html"><img src="images/GoodGums-logo.png" alt="Good Gumes logo" width="200" /></a>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li class="menuList">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menuList">
+                <a href="products.html">Products</a>
+                <ul>
+                    <li class="subMenu"><a href="#">On Sale</a></li>
+                    <li class="subMenu"><a href="#">New Products</a></li>
+                    <li class="subMenu"><a href="#">All Products</a></li>
+                </ul>
+            </li>
+            <li class="menuList">
+                <a href="Purchase.html" class="current">Purchase</a>
+            </li>
+            <li class="menuList">
+                <a href="about.html">About</a>
+                <ul>
+                    <li class="subMenu"><a href="#">Mission and Vision</a></li>
+                    <li class="subMenu"><a href="#">History</a></li>
+                    <li class="subMenu"><a href="#">Staff</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <hr />
+
+    <main>
+        <section>
+            <div class="settingForm">
+                <!-- Filling the form to purchase the products -->
+                <h2>Purchase Form</h2>
+                <form id="PurchaseForm" name="PurchaseForm" method="get" action="response.html">
+                    <div class="inputField">
+                        <label for="FullName">Full name:</label><br />
+                        <input id="FullName" name="FullName" type="text" autofocus placeholder="Steve Barakatt" required="required" />
+                    </div>
+                    <div class="inputField">
+                        <label for="PhoneNumber">Phone No:</label><br />
+                        <input id="PhoneNumber" name="PhoneNumber" type="text" placeholder="0400000000" required="required" pattern="[0-9]{10}" title="ten digits" />
+                    </div>
+                    <div class="inputField">
+                        <label for="Email">Email:</label><br />
+                        <input id="Email" name="Email" type="email" placeholder="abc@gmail.com" required="required" />
+                    </div>
+                    <div class="inputField">
+                        <label for="Address">Address:</label><br />
+                        <input id="Address" name="Address" type="text" placeholder="1,11 wood street, bendigo" required="required" />
+                    </div>
+                    <br />
+                    <!-- Ordering products table -->
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tr>
+                            <td class="noOption">1.</td>
+                            <td class="productOption">
+                                <label for="ProductNo1"></label>
+                                <select id="ProductNo1" name="ProductNo1">
+                                    <option>Select a product</option>
+                                    <option>Silver Princess Gum - $45</option>
+                                    <option>Snow Gum - $35</option>
+                                    <option>Red Flowering Gum - $40</option>
+                                </select>
+                            </td>
+                            <td class="orderNo">
+                                <label for="QuantityNo1"></label>
+                                <input id="QuantityNo1" name="QuantityNo1" type="text" required="required" placeholder="1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">2.</td>
+                            <td class="productOption">
+                                <label for="ProductNo2"></label>
+                                <select id="ProductNo2" name="ProductNo2">
+                                    <option>Select a product</option>
+                                    <option>Crimson Bottlebrush - $55</option>
+                                    <option>Happy Wanderer - $65</option>
+                                    <option>Poa Grass - $35</option>
+                                </select>
+                            </td>
+                            <td class="orderNo">
+                                <label for="QuantityNo2"></label>
+                                <input id="QuantityNo2" name="QuantityNo2" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">3.</td>
+                            <td class="productOption">
+                                <label for="ProductNo3"></label>
+                                <select id="ProductNo3" name="ProductNo3">
+                                    <option>Select a product</option>
+                                    <option>Golden Wattle - $39</option>
+                                    <option>Lilly Pilly - $60</option>
+                                    <option>Canberra Bells - $45</option>
+                                </select>
+                            </td>
+                            <td class="orderNo">
+                                <label for="QuantityNo3"></label>
+                                <input id="QuantityNo3" name="QuantityNo3" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">4.</td>
+                            <td class="productOption">
+                                <label for="ProductNo4"></label>
+                                <select id="ProductNo4" name="ProductNo4">
+                                    <option>Select a product</option>
+                                    <option>Grevillia Firecracker - $40</option>
+                                    <option>silky Oak - $38</option>
+                                    <option>Waratah - $55</option>
+                                </select>
+                            </td>
+                            <td class="orderNo">
+                                <label for="QuantityNo4"></label>
+                                <input id="QuantityNo4" name="QuantityNo4" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">5.</td>
+                            <td class="productOption">
+                                <label for="ProductNo5"></label>
+                                <select id="ProductNo5" name="ProductNo5">
+                                    <option>Select a product</option>
+                                    <option>Rose Boronia - $58</option>
+                                    <option>Tall Kangaroo Paw - $60</option>
+                                    <option>Rusty Gum - $39</option>
+                                </select>
+                            </td>
+                            <td class="orderNo">
+                                <label for="QuantityNo5"></label>
+                                <input id="QuantityNo5" name="QuantityNo5" type="text" />
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div class="inputField">
+                        How would you like to be contacted for the payment:
+                        <input id="PhonePay" name="payOption" type="radio" value="Phone" />Phone /
+                        <input id="EmailPay" name="payOption" type="radio" value="Email" />Email
+                    </div>
+                    <div class="inputField">
+                        <label for="check">I have read and understood the purchase and return policies:</label>
+                        <input id="check" name="check" type="checkbox" value="check" required="required" />
+                    </div>
+                    <div class="inputField">
+                        <label for="comments">Notes / comments, if any:</label><br />
+                        <textarea id="comments" name="comments" cols="60" rows="5"></textarea>
+                    </div>
+                    <div class="inputButton">
+                        <!-- Activate 'passResponse()' function, when the submit button has clicked. -->
+                        <input id="Purchase" type="submit" value="Purchase" onclick="passResponse();" />
+                        <input id="Clear" type="reset" value="Clear">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <hr />
+
+    <footer>
+        <span>
+            Copyright &copy; 2022. Good Gumes Corp. all rights reserved
+        </span>
+        <!-- reference: João Ventura, https://venturas.org/badges, accessed 18/03/2022, Creative Commons licence -->
+        <span class="float">
+            <img src="images/HTML_Validation_logo.png" alt="Valid HTML5" />
+        </span>
+        <span class="float">
+            <img src="images/CSS_Validation_logo.png" alt="Valid CSS3" />
+        </span>
+    </footer>
+    
+</body>
+</html>

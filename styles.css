@@ -1,0 +1,272 @@
+﻿/* Whole page styling */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    margin: 20px;
+}
+
+main {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0px auto;
+    min-height: 100vh;
+    display: flex; /* Treat "main" as a "flex container". */
+    flex-direction: column; /* For flexbox. */
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        border-left: initial;
+        border-right: initial;
+    }
+
+    .menuList {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* Nav styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    float: left;
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menuList {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    display: inline-block;
+}
+
+.menuList:hover {
+    background-color: #b89898;
+    border-radius: 15px;
+}
+
+a.current {
+    font-weight: bold;
+    background-color: #d0a5a5;
+    color: #8d7979;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.subMenu {
+    display: none;
+}
+
+/* Main styling */
+#firstPart {
+    height: 220px;
+}
+
+.float {
+    float: right;
+    background: fixed;
+}
+
+p#addfont {
+    font-style: italic;
+}
+
+/* h1 Animation effect */
+.movement {
+    font-size: 4em;
+    width: 200px;
+    font-family: sans-serif;
+    color: black;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    animation: slide 1s ease-out;
+}
+@keyframes slide {
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 450px;
+        opacity: 1;
+    }
+}
+
+/* Products and about page styling */
+.tabControl {
+    overflow: hidden;
+    border: 1px solid #808080;
+    border-radius: 20px;
+    background-color: #E4E4E4;
+}
+
+.tabControl:active {
+    background-color: #f2f2f2;
+    color: #8d7979;
+}
+
+.tabControl button {
+    background-color: #E4E4E4;
+    color: #191919;
+    float: left;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    width: 33.33%
+}
+
+.tabControl button:hover {
+    background-color: #d0a5a5;
+}
+
+.tabControl button:active {
+    background-color: #f2f2f2;
+    color: #8d7979;
+}
+
+.tabContent {
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: solid 1px #808080;
+    height: 100%;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+    background-color: #E4E4E4; 
+}
+
+th, td {
+    border: solid 1px #808080;
+    padding: 5px;
+}
+
+td.staffSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    table-layout: fixed;
+    padding: 10px 5px;
+}
+
+/* Purchase Form styling */
+.settingForm {   
+    padding: 30px;
+    margin: 30px;
+}
+
+.settingForm h2 {
+    margin-bottom: 40px;
+}
+
+.settingForm .inputField {
+    margin-bottom: 10px;
+}
+
+.settingForm .inputField input[type="text"], .inputField input[type="email"], .settingForm textarea {
+    border: solid 1px #808080;
+    border-radius: 5px;
+    width: 30%;
+    padding: 3px;   
+}
+
+.settingForm .inputField input#Address {
+    width: 45%;
+}
+
+.settingForm textarea {
+    height: 80px;
+    width: 45%;
+    resize: none;
+    border-radius: 10px;
+}
+
+.settingForm .inputButton input[type="submit"], .inputButton input[type="reset"] {
+    border: solid 1px #808080;
+    margin-top: 15px;
+    margin: 8px;
+    width: 100px;
+    background-color: #D1D0CE;
+    box-shadow: 1px 1px 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+td.noOption {
+    width: 5%;
+}
+
+td.productOption {
+    width: 60%;
+}
+
+select {
+    width: 100%;
+    padding: 3px;
+}
+
+td.orderNo {
+    text-align: center;
+}
+
+td.orderNo input[type="text"] {
+    width: 30%;
+    padding: 3px;
+    text-align: center;
+}
+
+td.totalPrice {
+    width: 15%;
+    text-align: center;
+}
+
+/* Footer styling */
+footer > span {
+    display: inline-block;
+    margin: 5px;
+}

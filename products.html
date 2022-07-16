@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Good Gums web page</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jinhwan Kim" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="purchasing plants" />
+    <meta name="description" content="Good Gums's commercial website." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Logo and menu bar -->
+    <header>
+        <a href="index.html"><img src="images/GoodGums-logo.png" alt="Good Gumes logo" width="200" /></a>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li class="menuList">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menuList">
+                <a href="products.html" class="current">Products</a>
+                <ul>
+                    <li class="subMenu"><a href="#">On Sale</a></li>
+                    <li class="subMenu"><a href="#">New Products</a></li>
+                    <li class="subMenu"><a href="#">All Products</a></li>
+                </ul>
+            </li>
+            <li class="menuList">
+                <a href="Purchase.html">Purchase</a>
+            </li>
+            <li class="menuList">
+                <a href="about.html">About</a>
+                <ul>
+                    <li class="subMenu"><a href="#">Mission and Vision</a></li>
+                    <li class="subMenu"><a href="#">History</a></li>
+                    <li class="subMenu"><a href="#">Staff</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <hr />
+
+    <main>
+        <section>
+            <span>
+                <!-- reference: pixabay, https://pixabay.com/photos/pink-cherry-blossoms-flowers-branch-324175/, accessed 18/03/2022, Pixabay License -->
+                <img src="images/backgroundPhoto.jpg" alt="Good Gumes background" width="450" class="float" />
+            </span>
+            <!-- Animation effect will be for this h1. -->
+            <h1 class="movement">PICK YOUR FAVORITE</h1>
+        </section>
+        <br />
+        <section>
+            <h2>OUR PRODUCTS</h2>
+            <!-- tab menu -->
+            <div class="tabControl">
+                <button class="tabButton" onclick="openProduct(event, 'OnSale')">On Sale</button>
+                <button class="tabButton" onclick="openProduct(event, 'NewProducts')">New Products</button>
+                <button class="tabButton" onclick="openProduct(event, 'AllProducts')">All Products</button>
+            </div>
+            <!-- The product information of the respective tab button -->
+            <div id="OnSale" class="tabContent">
+                <p>
+                    These products are on sale now.
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="images/Anigozanthos_flavidus.jpg" alt="Tall Kangaroo Paw" />
+                        </td>
+                        <td>
+                            <img src="images/Boronia_serrulata.jpg" alt="Rose Boronia" />
+                        </td>
+                        <td>
+                            <img src="images/Callistemon_citrinus.jpg" alt="Crimson Bottlebrush" />
+                        </td>
+                        <td>
+                            <img src="images/Telopea_speciosissima.jpg" alt="Waratah" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbContents">
+                            <p><b>Tall Kangaroo Paw</b></p>
+                            <p>Growing up to a meter long this hardy plant flowers from late spring all through summer</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Rose Boronia</b></p>
+                            <p>This shrub will grow up to 1 m in height and does best in well drained soils. Pretty pink flowers are produced during the spring.</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Crimson Bottlebrush</b></p>
+                            <p>This tough plant is great to use as hedging and displays wonderful red flowers from spring through to summer</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Waratah</b></p>
+                            <p>This evergreen shrub grows to a height of 3m. It displays astounding red flowers throughout spring</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="NewProducts" class="tabContent">
+                <p>
+                    These products are newly released.
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="images/Syzygium_smithii.jpg" alt="Lily Pilly" />
+                        </td>
+                        <td>
+                            <img src="images/Corymbia_ficifolia.jpg" alt="Red Flowering Gum" />
+                        </td>
+                        <td>
+                            <img src="images/Hardenbergia_violacea.jpg" alt="Happy Wanderer" />
+                        </td>
+                        <td>
+                            <img src="images/Correa_federation_bell_x_mannii.jpg" alt="Canberra Bells" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbContents">
+                            <p><b>Lilly Pilly</b></p>
+                            <p>Growing to a height of 3-5m grown together these plants can be used for hedging. It has pretty flowers in the summer and fruits in winter.</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Red Flowering Gum</b></p>
+                            <p>This flowering gum will grow to a size of around 3-4m and produces stunning red flowers in late spring</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Happy Wanderer</b></p>
+                            <p>With its pretty purple flowers and quick rate of expansion this climbing plant is ideal for covering pergolas, fences, and trellises.</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Canberra Bells</b></p>
+                            <p>This pretty shrub grows to a height of 1m and produces lovely red and white flowers in autumn.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="AllProducts" class="tabContent">
+                <p>
+                    There are all our products below.
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="images/Grevillia_robusta.jpg" alt="Silky Oak" />
+                        </td>
+                        <td>
+                            <img src="images/Acacia_pycnantha.jpg" alt="Golden Wattle" />
+                        </td>
+                        <td>
+                            <img src="images/Eucalyptus_pauciflora.jpg" alt="Snow Gum" />
+                        </td>
+                        <td>
+                            <img src="images/Angophora_costata.jpg" alt="Rusty Gum" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbContents">
+                            <p><b>Silky Oak</b></p>
+                            <p>This graceful tree can grow to a height of between 10-30m and produces wonderful orange and gold flowers in spring</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Golden Wattle</b></p>
+                            <p>A tree that grows to a height of 10m it delights with vibrant yellow flowers in spring.</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Snow Gum</b></p>
+                            <p>Native to eastern Australia the Snow Gum grows to a height of 5-7m and will put up with some frost</p>
+                        </td>
+                        <td class="tbContents">
+                            <p><b>Rusty Gum</b></p>
+                            <p>This tree is best known for its colourful peeling bark. It grows up to 30m in height and has pretty white flowers.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <hr />
+
+    <footer>
+        <span>
+            Copyright &copy; 2022. Good Gumes Corp. all rights reserved
+        </span>
+        <!-- reference: João Ventura, https://venturas.org/badges, accessed 18/03/2022, Creative Commons licence -->
+        <span class="float">
+            <img src="images/HTML_Validation_logo.png" alt="Valid HTML5" />
+        </span>
+        <span class="float">
+            <img src="images/CSS_Validation_logo.png" alt="Valid CSS3" />
+        </span>
+    </footer>
+    <script src="tabs.js"></script>
+</body>
+</html>

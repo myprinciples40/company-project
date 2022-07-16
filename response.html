@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Good Gums web page</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jinhwan Kim" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="purchasing plants" />
+    <meta name="description" content="Good Gums's commercial website." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Logo and menu bar -->
+    <header>
+        <a href="index.html"><img src="images/GoodGums-logo.png" alt="Good Gumes logo" width="200" /></a>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li class="menuList">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="menuList">
+                <a href="products.html">Products</a>
+                <ul>
+                    <li class="subMenu"><a href="#">On Sale</a></li>
+                    <li class="subMenu"><a href="#">New Products</a></li>
+                    <li class="subMenu"><a href="#">All Products</a></li>
+                </ul>
+            </li>
+            <li class="menuList">
+                <a href="Purchase.html" class="current">Purchase</a>
+            </li>
+            <li class="menuList">
+                <a href="about.html">About</a>
+                <ul>
+                    <li class="subMenu"><a href="#">Mission and Vision</a></li>
+                    <li class="subMenu"><a href="#">History</a></li>
+                    <li class="subMenu"><a href="#">Staff</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <hr />
+
+    <main>
+        <!-- The user and products Information that the user entered -->
+        <section>
+            <div class="settingForm">
+                <h2>Response page</h2>
+                <p id="response"></p>
+                <form id="PurchaseForm" name="PurchaseForm" method="get" action="response.html">
+                    <div class="inputField">
+                        <p id="FullName"></p>
+                    </div>
+                    <div class="inputField">
+                        <p id="PhoneNumber"></p>
+                    </div>
+                    <div class="inputField">
+                        <p id="Email"></p>
+                    </div>
+                    <div class="inputField">
+                        <p id="Address"></p>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>#</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td class="noOption">1.</td>
+                            <td class="productOption">
+                                <p id="ProductNo1"></p>
+                            </td>
+                            <td class="orderNo">
+                                <p id="QuantityNo1"></p>
+                            </td>
+                            <td id="totalPrice1" class="totalPrice"></td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">2.</td>
+                            <td class="productOption">
+                                <p id="ProductNo2"></p>
+                            </td>
+                            <td class="orderNo">
+                                <p id="QuantityNo2"></p>
+                            </td>
+                            <td id="totalPrice2" class="totalPrice"></td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">3.</td>
+                            <td class="productOption">
+                                <p id="ProductNo3"></p>
+                            </td>
+                            <td class="orderNo">
+                                <p id="QuantityNo3"></p>
+                            </td>
+                            <td id="totalPrice3" class="totalPrice"></td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">4.</td>
+                            <td class="productOption">
+                                <p id="ProductNo4"></p>
+                            </td>
+                            <td class="orderNo">
+                                <p id="QuantityNo4"></p>
+                            </td>
+                            <td id="totalPrice4" class="totalPrice"></td>
+                        </tr>
+                        <tr>
+                            <td class="noOption">5.</td>
+                            <td class="productOption">
+                                <p id="ProductNo5"></p>
+                            </td>
+                            <td class="orderNo">
+                                <p id="QuantityNo5"></p>
+                            </td>
+                            <td id="totalPrice5" class="totalPrice"></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Grand total:</th>
+                            <th id="GrandTotal"></th>
+                        </tr>
+                    </table>
+                    <br />
+                    <div class="inputField">
+                        How would you like to be contacted for the payment:
+                        <p id="PhonePay"></p>
+                        <p id="EmailPay"></p>
+                    </div>
+                    <div class="inputField">
+                        <p id="check"></p>
+                    </div>
+                    <div class="inputField">
+                        Notes / comments, if any:<br />
+                        <p id="comments"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <hr />
+
+    <footer>
+        <span>
+            Copyright &copy; 2022. Good Gumes Corp. all rights reserved
+        </span>
+        <!-- reference: João Ventura, https://venturas.org/badges, accessed 18/03/2022, Creative Commons licence -->
+        <span class="float">
+            <img src="images/HTML_Validation_logo.png" alt="Valid HTML5" />
+        </span>
+        <span class="float">
+            <img src="images/CSS_Validation_logo.png" alt="Valid CSS3" />
+        </span>
+    </footer>
+    <!--<script src="response.js"></script>이거 대신 선생이 메일로 보내준 것 넣어봄-->
+    <script src="response2.js"></script>
+</body>
+</html>
